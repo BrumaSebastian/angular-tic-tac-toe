@@ -1,0 +1,34 @@
+.navigation {
+  display: grid;
+  grid-template-rows: 10% 89%;
+  height: 100%;
+  background-color: bisque;
+  grid-gap: 1%;
+  margin-bottom: 0px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 6px dashed gray;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+button {
+  margin-top: 2px;
+  height: 10%;
+  width: 100%;
+}
+
+hr.solid {
+  border-top: 3px solid black;
+  margin: 1px;
+  width: 100%;
+}
