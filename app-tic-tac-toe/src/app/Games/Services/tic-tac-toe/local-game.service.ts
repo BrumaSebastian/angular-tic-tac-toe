@@ -1,20 +1,29 @@
 import { Injectable } from '@angular/core';
 import { GameService } from './GameService';
+import { TileValue } from './TileValue';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LocalGameService implements GameService {
-  constructor() {}
-  startGame(playWindow: string[]): string[] {
-    playWindow = new Array(9).fill('');
+export class LocalGameService extends GameService {
+  constructor() {
+    super();
+    this.playerOne = TileValue.X;
+    this.playerTwo = TileValue.O;
+  }
 
-    return playWindow;
+  override makeMove(index: number): void {
+    if (this.playWindow[index] !== '') return;
+
+    this.playWindow[index] = this.currentPlayer!;
+
+    if (!this.checkWinner()) {
+      this.setNextPlayer();
+    }
   }
-  makeMove(): void {
-    throw new Error('Method not implemented.');
-  }
-  checkWinner(): string | null {
-    throw new Error('Method not implemented.');
+  override checkWinner(): string | null {
+    console.log('safds');
+
+    return null;
   }
 }

@@ -32,6 +32,10 @@ export class TicTacToeComponent {
 
   startGame() {
     this.isGameStarted = true;
-    this.playWindow = this.gameService.startGame(this.playWindow);
+    this.playWindow = this.gameService.startGame();
+  }
+
+  setTile(tileIndex: number) {
+    this.gameService.makeMove(tileIndex);
   }
 }
