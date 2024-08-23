@@ -1,10 +1,17 @@
 <div class="navigation">
   <div class="nav-header">
-    <h4 class="nav-header-title">This is title</h4>
+    <h4
+      class="nav-header-title non-selectable"
+      (click)="onGameModeSelect(GameMode.None)"
+    >
+      Select Tic-Tac-Toe mode
+    </h4>
   </div>
   <div class="nav-content">
-    <button>Function 1</button>
-    <button>Function 2</button>
-    <button>Function 3</button>
+    <button (click)="onGameModeSelect(GameMode.SinglePlayer)">Play solo</button>
+    <button (click)="onGameModeSelect(GameMode.MultiPlayer)">
+      Play multiplayer
+    </button>
+    <button (click)="onGameModeSelect(GameMode.VersusAI)">Play vs AI</button>
   </div>
 </div>

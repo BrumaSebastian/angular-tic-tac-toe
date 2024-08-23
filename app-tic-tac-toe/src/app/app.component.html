@@ -1,6 +1,6 @@
 <main class="main">
-  <app-navigation />
-  <app-main-content />
+  <app-navigation (gameModeSelected)="setGameMode($event)" />
+  <app-main-content [gameMode]="gameMode" />
 </main>
 
 <router-outlet />
