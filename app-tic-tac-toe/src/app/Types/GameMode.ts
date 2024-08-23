@@ -1,6 +1,6 @@
 export enum GameMode {
   None = 'None',
-  SinglePlayer = 'SinglePlayer',
+  Local = 'LocalCO-OP',
   MultiPlayer = 'MultiPlayer',
   VersusAI = 'VersusAI',
 }

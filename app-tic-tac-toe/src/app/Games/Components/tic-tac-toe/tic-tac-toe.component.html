@@ -1,0 +1,12 @@
+<div class="board-window">
+  <ng-container *ngIf="!isGameStarted; else gameWindow"
+    ><button (click)="startGame()">Start game</button>
+  </ng-container>
+  <ng-template #gameWindow>
+    <div class="board">
+      <div *ngFor="let item of playWindow; let i = index">
+        <button class="board-box">{{ item }}</button>
+      </div>
+    </div>
+  </ng-template>
+</div>

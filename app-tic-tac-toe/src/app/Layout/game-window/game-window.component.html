@@ -1,4 +1,7 @@
-<ng-container *ngIf="gameType === GameMode.None"><div>None</div> </ng-container>
-<ng-container *ngIf="gameType === GameMode.SinglePlayer"
-  ><div>SinglePlayer</div>
+<ng-container *ngIf="gameType === GameMode.None">
+  Select a game mode
+</ng-container>
+
+<ng-container *ngIf="gameType === GameMode.Local">
+  <app-tic-tac-toe [gameMode]="gameType"></app-tic-tac-toe>
 </ng-container>
