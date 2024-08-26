@@ -8,5 +8,13 @@
         <button class="board-box" (click)="setTile(i)">{{ item }}</button>
       </div>
     </div>
+
+    <div class="board-statistic">
+      <div class="statistic-item left">{{ players[0] }}</div>
+      <div class="statistic-item middle">
+        Now: {{ currentPlayingPlayer.name }}
+      </div>
+      <div class="statistic-item right">{{ players[1] }}</div>
+    </div>
   </ng-template>
 </div>

@@ -1,5 +1,6 @@
 .board-window {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -8,16 +9,41 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-template-rows: repeat(3, 25%);
+  grid-template-columns: repeat(3, minmax(10%, 20%));
+  grid-template-rows: repeat(3, minmax(10%, 25%));
   justify-content: center;
   align-content: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 .board-box {
   width: 100%;
   height: 100%;
+  font-size: x-large;
+}
+
+.board-statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  height: 10%;
+  justify-items: center;
+  align-items: center;
+}
+
+.statistic-item {
   font-size: large;
+}
+
+.left {
+  justify-self: start;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
 }
